@@ -36,7 +36,28 @@ var (
 	location4 = "bangalore"	
 )
 
+// Variables can be initialize in same line
+var (
+	name5, age5, location5 = "pankaj", 18, "bangalore"
+)
+
+// Inside a function, := assignment can be used instead of var
+func SomeFunc() {
+	name6, location6 := "pankaj", "bangalore"
+	age6 := 18
+	fmt.Printf("%s %d %s \n",name6, age6, location6)
+}
+
+// Varaible can also be of function type
+var action = func(aString string) {
+	//doing something
+	fmt.Println(aString)
+}
+
 func main() {
 	fmt.Println(reflect.TypeOf(age4)) //int
 	fmt.Println(reflect.TypeOf(age3)) //int
+
+	SomeFunc()
+	action("hello world")
 }
